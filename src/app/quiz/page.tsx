@@ -1,11 +1,30 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
+import {quiz} from '../data.js'
 
 const page = () => {
-    
+  const [activeQuestion, setActiveQuestion] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [checked, setChecked] = useState(false);
+  const [selectedAnswerIndex,setSelectedAnswerIndex] = useState(null);
+  const [showResult, setShowResult] = useState(false);
+  const [result, setResult] = useState({
+    score:0,
+    correctAnswers :0,
+    wrongAnswers:0,
+  });
+   const {questions} = quiz;
+   const [question, answers,correctAnswer] = questions[activeQuestion];
+
   return (
-    <div>
-        <div className='text-center text-3xl text-yellow-300'>Quiz page</div>
+    <div className='container'>
+         <h1>Quiz Page</h1>
+         <div>
+            <h2>Question : {activeQuestion + 1}
+                         <span>/{questions.length}</span>
+            </h2>
+   
+         </div>
     </div>
   )
 }
