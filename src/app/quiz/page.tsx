@@ -31,7 +31,7 @@ const page = () => {
   };
 
   // Calculate score and increment to next question
-  
+
   const nextQuestion = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) =>
@@ -59,7 +59,7 @@ const page = () => {
     <div className='container'>
       <h1 className='font-bold text-2xl'>Quiz Page</h1>
       <div>
-        <h2>
+        <h2 className='text-xl'>
           Question: {activeQuestion + 1}
           <span>/{questions.length}</span>
         </h2>
