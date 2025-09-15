@@ -31,6 +31,7 @@ const page = () => {
   };
 
   // Calculate score and increment to next question
+  
   const nextQuestion = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) =>
