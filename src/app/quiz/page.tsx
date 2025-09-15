@@ -17,10 +17,19 @@ const page = () => {
    const {questions} = quiz;
    const {question, answers,correctAnswer} = questions[activeQuestion];
 
-   const onAnswerSelected  = ((answer,index)) => {
-      setChecked(true);
-      setSelectedAnswerIndex(index)
-   }
+  //  const onAnswerSelected  = ((answer,index)) => {
+  //     setChecked(true);
+  //     setSelectedAnswerIndex(index)
+  //     if(answer === correctAnswer) {
+  //       setSelectedAnswer(true)
+  //       console.log('true');
+        
+  //     }else{
+  //       setSelectedAnswer(false)
+  //       console.log('false');
+        
+  //     }
+  //  }
 
   return (
     <div className='container'>
