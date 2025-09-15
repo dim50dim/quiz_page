@@ -51,6 +51,11 @@ const page = () => {
                         <span>{answer}</span>
                     </li>
                 })}
+                {checked ? (
+               <button className='btn'>Next</button>
+                ) : (
+                  <button className='btn-disabled'>Now</button>
+                )}
             </div>
             
             ) : (
